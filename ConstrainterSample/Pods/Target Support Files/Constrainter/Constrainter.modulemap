@@ -1,0 +1,6 @@
+framework module Constrainter {
+  umbrella header "Constrainter-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_ConstrainterSample {
+  umbrella header "Pods-ConstrainterSample-umbrella.h"
+
+  export *
+  module * { export * }
+}
