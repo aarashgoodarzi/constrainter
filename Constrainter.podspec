@@ -27,8 +27,7 @@ Pod::Spec.new do |spec|
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.source       = { :git => "https://github.com/aarashgoodarzi/constrainter.git", :tag => "#{spec.version}" }
 
-
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source_files  = "constrainter/constrainter/*.{swift}"
- 
+  spec.source_files  = "constrainter/**/**/*"
+  spec.framework = "UIKit"
 end

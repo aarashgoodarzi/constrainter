@@ -32,7 +32,9 @@
 		5B8C925F24701AD400248D49 = {
 			isa = PBXGroup;
 			children = (
-				5B8C926B24701AD400248D49 /* constrainter */,
+				5B8C926D24701AD400248D49 /* Info.plist */,
+				5B8C926C24701AD400248D49 /* constrainter.h */,
+				5B8C927424701B1B00248D49 /* Constraint.swift */,
 				5B8C926A24701AD400248D49 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,16 +45,6 @@
 				5B8C926924701AD400248D49 /* constrainter.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		5B8C926B24701AD400248D49 /* constrainter */ = {
-			isa = PBXGroup;
-			children = (
-				5B8C926C24701AD400248D49 /* constrainter.h */,
-				5B8C927424701B1B00248D49 /* Constraint.swift */,
-				5B8C926D24701AD400248D49 /* Info.plist */,
-			);
-			path = constrainter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +264,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = constrainter/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,7 +290,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = constrainter/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
