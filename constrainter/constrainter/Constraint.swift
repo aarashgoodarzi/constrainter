@@ -61,7 +61,7 @@ extension UIView {
     @discardableResult
     func top(_ value: CGFloat = 0, to attribute: NSLayoutConstraint.Attribute = .top,  of view: UIView? = nil) -> UIView {
         
-        let view: UIView? = view.isNotNil ? view : superview
+        let view: UIView? = view != nil ? view : superview
         self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: value))
         return self
     }
@@ -70,7 +70,7 @@ extension UIView {
     @discardableResult
     func left(_ value: CGFloat = 0, to attribute: NSLayoutConstraint.Attribute = .left,  of view: UIView? = nil) -> UIView {
         
-        let view: UIView? = view.isNotNil ? view : superview
+        let view: UIView? = view != nil ? view : superview
         self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .left, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: value))
         return self
     }
@@ -79,7 +79,7 @@ extension UIView {
     @discardableResult
     func bottom(_ value: CGFloat = 0, to attribute: NSLayoutConstraint.Attribute = .bottom,  of view: UIView? = nil) -> UIView {
         
-        let view: UIView? = view.isNotNil ? view : superview
+        let view: UIView? = view != nil ? view : superview
         self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: -value))
         return self
     }
@@ -88,7 +88,7 @@ extension UIView {
     @discardableResult
     func right(_ value: CGFloat = 0, to attribute: NSLayoutConstraint.Attribute = .right,  of view: UIView? = nil) -> UIView {
         
-        let view: UIView? = view.isNotNil ? view : superview
+        let view: UIView? = view != nil ? view : superview
         self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .right, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: -value))
         return self
     }
@@ -105,7 +105,7 @@ extension UIView {
     @discardableResult
     func centerHorizontally(_ offset: CGFloat = 0, of view: UIView? = nil) -> UIView {
         
-        let view: UIView? = view.isNotNil ? view : superview
+        let view: UIView? = view != nil ? view : superview
         self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: offset))
 
         return self
@@ -115,7 +115,7 @@ extension UIView {
     @discardableResult
     func centerVertically(_ offset: CGFloat = 0, of view: UIView? = nil) -> UIView{
         
-        let view: UIView? = view.isNotNil ? view : superview
+        let view: UIView? = view != nil ? view : superview
         self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: offset))
         return self
     }
