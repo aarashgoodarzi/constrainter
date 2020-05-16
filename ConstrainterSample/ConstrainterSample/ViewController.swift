@@ -15,9 +15,40 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        let redView = UIView()
-        self.view.addSubview(redView)
-        redView.beginConstraints()
+        let backView = UIView()
+        let leftButton = UIButton()
+        let centerButton = UIButton()
+       
+        
+        //adding views
+        view.addSubview(backView)
+        backView.addSubview(leftButton)
+        backView.addSubview(centerButton)
+        
+        backView.backgroundColor = .red
+        leftButton.backgroundColor = .blue
+        centerButton.backgroundColor = .green
+        
+        //setting backView
+        backView.beginConstraints()
+        .edges()
+        .endConstraints()
+        
+        
+        //setting centerButton at center of backView(its superview)
+        centerButton.beginConstraints()
+        .center()
+        .height(100)
+        .width(100)
+        .endConstraints()
+        
+        //setting rightButton at left side of centerButton
+        leftButton.beginConstraints()
+            .right(10, to: .left, of: centerButton)
+            .height(100)
+            .width(100)
+            .centerVertically()
+            .endConstraints()
     }
 
 
