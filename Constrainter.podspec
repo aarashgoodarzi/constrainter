@@ -19,7 +19,6 @@ Pod::Spec.new do |spec|
  
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.author             = { "Arash Goodarzi" => "aarash.goodarzi@gmail.com" }
-  spec.social_media_url   = "https://www.linkedin.com/in/mehrdad-goodarzi-4b5160128"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
    spec.platform     = :ios, "9.0"
@@ -28,6 +27,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/aarashgoodarzi/constrainter.git", :tag => "#{spec.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source_files  = "constrainter/**/**/*"
+  spec.source_files  = "constrainter/**/*.{h,m,swift}"
   spec.framework = "UIKit"
+  spec.swift_version = ["4.2","5.0","5.1","5.2","5.3"]
 end
