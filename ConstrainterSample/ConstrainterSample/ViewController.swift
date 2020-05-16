@@ -6,7 +6,7 @@
 //  Copyright © 2020 aarashgoodari. All rights reserved.
 //
 
-import UIKit
+
 import Constrainter
 
 class ViewController: UIViewController {
@@ -16,18 +16,18 @@ class ViewController: UIViewController {
         
         
         let backView = UIView()
-        let leftButton = UIButton()
-        let centerButton = UIButton()
+        let blueButton = UIButton()
+        let greenButton = UIButton()
        
         
         //adding views
         view.addSubview(backView)
-        backView.addSubview(leftButton)
-        backView.addSubview(centerButton)
+        backView.addSubview(blueButton)
+        backView.addSubview(greenButton)
         
         backView.backgroundColor = .red
-        leftButton.backgroundColor = .blue
-        centerButton.backgroundColor = .green
+        blueButton.backgroundColor = .blue
+        greenButton.backgroundColor = .green
         
         //setting backView
         backView.beginConstraints()
@@ -35,19 +35,21 @@ class ViewController: UIViewController {
         .endConstraints()
         
         
-        //setting centerButton at center of backView(its superview)
-        centerButton.beginConstraints()
+        //setting greenButton at center of backView(its superview)
+        greenButton.beginConstraints()
         .center()
         .height(100)
         .width(100)
         .endConstraints()
         
-        //setting rightButton at left side of centerButton
-        leftButton.beginConstraints()
-            .right(10, to: .left, of: centerButton)
+        //setting rightButton at left side of greenButton
+        let referencedConst = NSLayoutConstraint()//set what you want and keep its reference
+        blueButton.beginConstraints()
+            .right(10, to: .left, of: greenButton)
             .height(100)
             .width(100)
             .centerVertically()
+            .customConstraint(referencedConst)
             .endConstraints()
     }
 
