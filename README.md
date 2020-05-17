@@ -87,12 +87,10 @@ import Constrainter
  # Constraint to right/left/top/bottom and height/width
  
  ```
- let blueButton = UIButton()
- let greenButton = UIButton()
-       
-        
+ 
 //adding views
-view.addSubview(backView)
+let blueButton = UIButton()
+let greenButton = UIButton()
 parentView.addSubview(blueButton)
 parentView.addSubview(greenButton)
 
