@@ -20,7 +20,7 @@ and also you can add your own custom constraint outside the box and keep its ref
 # How to start
 Add this line in your podfile
  
- ```
+ ```swift
  pod 'Constrainter'
  ```
 
@@ -50,7 +50,7 @@ import Constrainter
         .endConstraints()
  ```
 
- ```
+ ```swift
   parentView.addSubview(view)
   view.beginConstraints()
         .center()
@@ -58,25 +58,27 @@ import Constrainter
  ```
  
  
- ```
+ ```swift
   view.beginConstraints()
         .centerVertically()
         .endConstraints()
  ```
  or
-  ```
+ 
+  ```swift
   view.beginConstraints()
         .centerVertically(-10)
         .endConstraints()
  ```
  or
-  ```
+ 
+  ```swift
   view.beginConstraints()
         .centerVertically(10)
         .endConstraints()
  ```
  
- ```
+ ```swift
   view.beginConstraints()
         .centerHorizontally()
         .endConstraints()
@@ -86,7 +88,7 @@ import Constrainter
  
  # Constraint to right/left/top/bottom and height/width
  
- ```
+ ```swift
  
 //adding views
 let blueButton = UIButton()
@@ -105,7 +107,7 @@ greenButton.beginConstraints()
  
 and now set blueButton at left side of greenButton:
 
-```
+```swift
  blueButton.beginConstraints()
    .right(10, to: .left, of: greenButton)
    .height(100)
@@ -117,7 +119,7 @@ and now set blueButton at left side of greenButton:
 
 # Adding custom constraints and keeping its reference
 
-```
+```swift
 let referencedConst = NSLayoutConstraint()//set what you want and keep its reference for later use.
 blueButton.beginConstraints()
    .right(10, to: .left, of: greenButton)
