@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         .width(100)
         .endConstraints()
         
-        //setting rightButton at left side of greenButton
+        //setting blueButton at left side of greenButton
         let referencedConst = NSLayoutConstraint()//set what you want and keep its reference
         blueButton.beginConstraints()
             .right(10, to: .left, of: greenButton)
