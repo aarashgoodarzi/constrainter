@@ -28,13 +28,13 @@ Add this line in your podfile
 
 import Constrainter to your class and use follow instructions.
 
-```
+```swift
 import Constrainter
 ```
 
 # Constraint to all edges
   
-  ```
+  ```swift
   parentView.addSubview(view)
   view.beginConstraints()
         .edges()
@@ -43,7 +43,7 @@ import Constrainter
 
 # Constraint to center/centerVertically/centerHorizontally
 
-```
+```swift
   parentView.addSubview(view)
   view.beginConstraints()
         .center()
