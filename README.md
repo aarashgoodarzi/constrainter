@@ -82,7 +82,7 @@ import Constrainter
         .endConstraints()
  ```
  
- In above samples Constrainter sets constarint to superview but you acn define where to centerHorizontally/centerVertically.
+ In above samples Constrainter sets constarint to superview but you can define where to centerHorizontally/centerVertically.
  
  # Constraint to right/left/top/bottom and height/width
  
