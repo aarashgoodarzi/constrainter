@@ -12,7 +12,7 @@
 
 A handy tool to constraint UIViews
 
-This is a very lightweight constrainting tool (inspired by [CosmicMind Material](https://github.com/CosmicMind/Material) layouting syntax)
+Constrainter (Constrainer) is a very lightweight constrainting tool (inspired by [CosmicMind Material](https://github.com/CosmicMind/Material) layouting syntax)
 which supports constrainting a view to its super and to another view with a very easy syntax. 
 and also you can add your own custom constraint outside the box and keep its reference.
 
