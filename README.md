@@ -82,7 +82,7 @@ import Constrainter
         .endConstraints()
  ```
  
- In above samples Constrainter sets constarint to superview but you can define where to centerHorizontally/centerVertically.
+ In above samples, Constrainter sets constarint to superview but you can define where to centerHorizontally/centerVertically.
  
  # Constraint to right/left/top/bottom and height/width
  
@@ -99,7 +99,7 @@ parentView.addSubview(greenButton)
 greenButton.beginConstraints()
   .center()
   .height(100)
-  . width(100)
+  .width(100)
   .endConstraints()
  ```
  
@@ -113,19 +113,19 @@ and now set blueButton at left side of greenButton:
    .centerVertically()
    .endConstraints()
 ```
-Note: This " to: of: " format can be used with left/right/top/bottom/centerHorizontally/centerVertically operators.
+**Note**: This " to: of: " format can be used with left/right/top/bottom/centerHorizontally/centerVertically operators.
 
 # Adding custom constraints and keeping its reference
 
 ```
 let referencedConst = NSLayoutConstraint()//set what you want and keep its reference for later use.
 blueButton.beginConstraints()
-    .right(10, to: .left, of: greenButton)
-    .height(100)
-    .width(100)
-    .centerVertically()
-    .customConstraint(referencedConst)
-    .endConstraints()
+   .right(10, to: .left, of: greenButton)
+   .height(100)
+   .width(100)
+   .centerVertically()
+   .customConstraint(referencedConst)
+   .endConstraints()
 ```
  
   
