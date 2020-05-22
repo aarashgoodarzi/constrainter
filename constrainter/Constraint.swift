@@ -19,7 +19,7 @@ public extension UIView {
     }
     
     //*
-    func endConstraints(asd: String? = nil) {
+    func endConstraints() {
         updateConstraints(for: self)
     }
     
@@ -40,7 +40,7 @@ public extension UIView {
     
     //Mark: - Constraints
     private func prepareForConstraint(view: UIView?) {
-        self.translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = false
         view?.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -54,7 +54,7 @@ public extension UIView {
     
     //**
     func edges() -> UIView {
-        return self.top().right().bottom().left()
+        return top().right().bottom().left()
     }
     
     //**
@@ -62,7 +62,7 @@ public extension UIView {
     func top(_ value: CGFloat = 0, to attribute: NSLayoutConstraint.Attribute = .top,  of view: UIView? = nil) -> UIView {
         
         let view: UIView? = view != nil ? view : superview
-        self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: value))
+        superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: value))
         return self
     }
     
@@ -71,7 +71,7 @@ public extension UIView {
     func left(_ value: CGFloat = 0, to attribute: NSLayoutConstraint.Attribute = .left,  of view: UIView? = nil) -> UIView {
         
         let view: UIView? = view != nil ? view : superview
-        self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .left, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: value))
+        superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .left, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: value))
         return self
     }
     
@@ -80,7 +80,7 @@ public extension UIView {
     func bottom(_ value: CGFloat = 0, to attribute: NSLayoutConstraint.Attribute = .bottom,  of view: UIView? = nil) -> UIView {
         
         let view: UIView? = view != nil ? view : superview
-        self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: -value))
+        superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: -value))
         return self
     }
     
@@ -89,7 +89,7 @@ public extension UIView {
     func right(_ value: CGFloat = 0, to attribute: NSLayoutConstraint.Attribute = .right,  of view: UIView? = nil) -> UIView {
         
         let view: UIView? = view != nil ? view : superview
-        self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .right, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: -value))
+        superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .right, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: -value))
         return self
     }
     
@@ -106,7 +106,7 @@ public extension UIView {
     func centerHorizontally(_ offset: CGFloat = 0, of view: UIView? = nil) -> UIView {
         
         let view: UIView? = view != nil ? view : superview
-        self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: offset))
+        superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: offset))
 
         return self
     }
@@ -116,14 +116,14 @@ public extension UIView {
     func centerVertically(_ offset: CGFloat = 0, of view: UIView? = nil) -> UIView{
         
         let view: UIView? = view != nil ? view : superview
-        self.superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: offset))
+        superview?.addConstraint(NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: offset))
         return self
     }
     
     //**
     @discardableResult
     func customConstraint(_ constraint: NSLayoutConstraint) -> UIView {
-        self.superview?.addConstraint(constraint)
+        superview?.addConstraint(constraint)
         return self
     }
     
